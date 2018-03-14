@@ -1,0 +1,19 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function first_manual_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the first_auto module.
+    case 'help.page.first_manual':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome first manual Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
